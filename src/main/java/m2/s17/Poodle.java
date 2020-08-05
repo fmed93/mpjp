@@ -13,13 +13,13 @@ public class Poodle extends Dog {
 		super(name);
 	}
 
+	public Poodle(String name, int weight, int curlDensity) {
+		super(name, weight);	// N.B: questa è una notazione "costruttore"
+		this.curlDensity = curlDensity;		// questa no
+	}
+	
 	public Poodle(String name, int weight) {
 		this(name, weight, DEFAULT_DENSITY);
-	}
-
-	public Poodle(String name, int weight, int curlDensity) {
-		super(name, weight);
-		this.curlDensity = curlDensity;
 	}
 	
 	@Override
@@ -29,6 +29,6 @@ public class Poodle extends Dog {
 	
 	@Override
 	public String toString() {
-		return "Poodle " + super.toString() + " " + curlDensity;
+		return "Poodle " + super.toString() + " " + "(curlDensity=" + curlDensity + ")";
 	}
 }

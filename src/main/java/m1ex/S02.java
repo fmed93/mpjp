@@ -7,10 +7,16 @@ public class S02 {
      * @param distance in meters
      * @param time     in seconds
      * @return speed in meters per second
+     *
+     * @throws IllegalArgumentException if distance or time are negative
      */
     public static double speed(double distance, double time) {
-        // TODO
-        return 0;
+    	if ((time<0)||(distance<0)) {
+    		throw new IllegalArgumentException("No negative values expected");
+    	}
+    	else {
+    		return distance / time;
+    	}
     }
 
     /**
@@ -23,8 +29,11 @@ public class S02 {
      * @return distance
      */
     public static double distance(int x0, int y0, int x1, int y1) {
-        // TODO
-        return 0;
+    	if ((x0==x1)&&(y0==y1)) {
+    		return 0;
+    	} else {
+    		return Math.sqrt(Math.pow((y0-y1),2)+Math.pow((x0-x1),2));
+    	}
     }
 
     /**
@@ -36,8 +45,11 @@ public class S02 {
      * @return the engine capacity in cm^3
      */
     public static double engineCapacity(double bore, double stroke, int nr) {
-        // TODO
-        return 0;
+    	if ((bore<0)||(stroke<0)||(nr<1)) {
+			return Double.NEGATIVE_INFINITY;
+    	} else {
+    		return (Math.pow(bore/2, 2)*Math.PI*stroke*nr)/1000;
+    	}
     }
 
     /**
@@ -45,10 +57,18 @@ public class S02 {
      * 
      * @param value
      * @return sum of digits
+     * @throws ExerciseException when value is negative
      */
-    public static int digitSum(int value) {
-        // TODO
-        return 0;
+    public static int digitSum(int value) throws ExerciseException {
+    	if (value < 0) {
+    		throw new ExerciseException("No negative values expected");
+    	}
+    	int count = 0;
+    	while (value > 0) {
+    		count += value%10;
+    		value /= 10;
+    	}	
+        return count;
     }
 
     /**
@@ -60,7 +80,15 @@ public class S02 {
      * @return
      */
     public static int score(double x, double y) {
-        // TODO
-        return 0;
+    	double distance = Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
+    	if (distance <= 1) {
+    		return 10;
+    	} else if (distance <= 5) {
+    		return 5;
+    	} else if (distance <= 10) {
+    		return 1;
+    	} else {
+    		return 0;
+    	}
     }
 }

@@ -9,7 +9,12 @@ public class Consultant extends Person {
     }
 
     public int getDaily() {
+    	System.out.println("getDaily() called for " + super.getFirstName());
         return daily;
+    }
+    
+    public String getFirstName() {
+    	return "Consultant " + super.getFirstName();
     }
     
     @Override

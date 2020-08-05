@@ -2,7 +2,7 @@ package m1.s22;
 
 public class AboutStringBuilder {
     public static void main(String[] args) {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder();  //c'è bisogno del costruttore esplicito, di usare "new"
         StringBuilder sb2 = new StringBuilder(20);
         StringBuilder sb3 = new StringBuilder("hello");
         

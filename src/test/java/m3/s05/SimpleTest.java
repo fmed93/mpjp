@@ -16,7 +16,7 @@ class SimpleTest {
             fail("An IllegalArgumentException was expected");
         } catch (IllegalArgumentException iae) {
             String message = iae.getMessage();
-            assertThat(message, is("Can't negate 0"));
+            assertThat(message, is("Can't negate MIN_VALUE"));
             return;
         }
     }

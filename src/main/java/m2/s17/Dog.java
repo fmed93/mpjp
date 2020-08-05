@@ -1,8 +1,8 @@
 package m2.s17;
 
 public class Dog {
-	private static final String DEFAULT_NAME = "???";
-	private static final int DEFAULT_WEIGHT = 7;
+	private static final String DEFAULT_NAME = "???";	// Data members
+	private static final int DEFAULT_WEIGHT = 7;		// Data members
 
 	private String name;
 	private int weight;

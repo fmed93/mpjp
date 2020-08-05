@@ -28,6 +28,10 @@ public class Main {
     }
 
     static void f(Pet[] pets) {
+    	if (pets == null) {
+    		return;
+    	}
+    	
         for (Pet pet : pets) {
             if (pet instanceof Dog) {
                 Dog dog = (Dog) pet;

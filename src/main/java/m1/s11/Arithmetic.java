@@ -4,7 +4,36 @@ public class Arithmetic {
     public static void main(String[] args) {
         int a = 10;
         int b = 3;
-
+        
+        int value = 496;
+        
+        boolean result = false;
+		if ((value>0)&&(value%2 == 0)) {
+			int i = 1;
+			int sum = 1;
+			while (i < Math.ceil(Math.sqrt(value))) {
+				i += 1;
+				if (value%i == 0) {
+					sum += (i + (value/i));
+				}
+			}
+			if (sum == value) {
+				result = true;
+			}
+		}
+		
+		System.out.println(result);
+        String s = new String ("ciao");
+		int l = s.length();
+		
+		//	for (int i=0; i<(l/2); i++) {
+		//		c=
+		//		s.replace(s.charAt(i),s.charAt(l-i));
+		//	}
+		//	return "";
+		
+		
+        
         System.out.println(a + b); // 13
         System.out.println(a - b); // 7
         System.out.println(a * b); // 30

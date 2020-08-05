@@ -24,6 +24,6 @@ public class Main {
     }
 
     static void interact(Dog barker) {
-        barker.bark();
+        System.out.println(barker.bark());
     }
 }

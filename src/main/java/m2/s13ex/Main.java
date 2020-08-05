@@ -13,9 +13,10 @@ public class Main {
             rightDirection = !rightDirection;
         }
         
-        Conditioning[] conditionings = new Conditioning[2];
+        Conditioning[] conditionings = new Conditioning[3];
         conditionings[0] = new Bus();
         conditionings[1] = new Car();
+        conditionings[2] = new Flat();
         
         int temperature = 20;
         for(Conditioning conditioning : conditionings) {

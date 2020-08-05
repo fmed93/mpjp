@@ -11,9 +11,12 @@ public class Narrowing {
         
         System.out.println(b);
 
-        char c = (char) i;
-        short s2 = (short)c;
-        System.out.println(c + " " + s2);
+        {
+        	char c = (char) i;
+        	short s2 = (short)c;
+        	String sx = "ciao";
+        	System.out.println(sx + c + " " + s2);
+        }
         
         byte neg = -1;
         int neg2 = neg;

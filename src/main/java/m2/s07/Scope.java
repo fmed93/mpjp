@@ -36,11 +36,11 @@ public class Scope {
         System.out.println(local);
         staticMember = 12;
 
-        Scope.k();
+        Scope.k();	// chiamo il metodo sulla classe
 
         Scope scope = new Scope();
         scope.f();
-        scope.g();
+        scope.g();	// chiamo il metodo sull'oggetto
         abs(4);
         cos(12);
     }
