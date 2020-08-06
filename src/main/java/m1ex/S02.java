@@ -1,6 +1,10 @@
 package m1ex;
 
+import java.util.logging.Logger;
+
 public class S02 {
+	private static final Logger LOG = Logger.getLogger("sample");
+	
     /**
      * Average speed
      * 
@@ -11,10 +15,13 @@ public class S02 {
      * @throws IllegalArgumentException if distance or time are negative
      */
     public static double speed(double distance, double time) {
+    	LOG.info(String.format("Distance: %.3f - Time %.2f",  distance, time));
+//		System.out.println("*** speed() called @ " + System.currentTimeMillis());
     	if ((time<0)||(distance<0)) {
     		throw new IllegalArgumentException("No negative values expected");
     	}
     	else {
+    		LOG.info(String.format("Speed: %.3f",  distance/time));
     		return distance / time;
     	}
     }

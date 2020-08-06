@@ -10,11 +10,11 @@ public class AsList {
         System.out.println(list);
 
         System.out.println("At index 2: " + list.get(2));
-        list.add(2, -997);
+        list.add(2, -997);  //ha costo N
         System.out.println("Index of -997: " + list.indexOf(-997));
 
-        list.remove(3);
-        list.set(3, 42);
+        list.remove(3);		//ha costo N
+        list.set(3, 42);	//ha costo 1
         System.out.println(list);
     }
 

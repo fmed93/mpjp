@@ -26,8 +26,8 @@ public class JUL {
         someLog();
 
         ConsoleHandler handler = new ConsoleHandler();
-        handler.setLevel(Level.ALL);
-        log.setLevel(Level.ALL);
+        handler.setLevel(Level.OFF);
+        log.setLevel(Level.OFF);
         log.addHandler(handler);
         log.setUseParentHandlers(false);
 

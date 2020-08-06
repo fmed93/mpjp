@@ -12,7 +12,7 @@ public class AsCollection {
         coll.addAll(aCollection());
         System.out.println(coll);
 
-        if (coll.contains(-2233)) {
+        if (coll.contains(-2233)) {  //"contains" si aspetta un oggetto. Ma non è un problema, perché c'è il boxing automatico
             System.out.println("-2233 is there");
         }
 
